@@ -1,8 +1,7 @@
 import axios from "axios";
-import { InitOptions } from "i18next";
 
 /** @public */
-export function generateUrl(langCode: string, host: string, port: string) {
+export function generateUrl(langCode, host, port) {
   const lang = langCode.slice(0, 2);
   const baseUrl = `//${host.split(":")[0]}:${port}`;
   const url = `${baseUrl}/app-resources/languages/${lang}.js`;
@@ -16,7 +15,7 @@ export function getUserLang(
     .catch(() => "en");
 }
 
-export function generateI18nConfig(lang: string): Promise<InitOptions> {
+export function generateI18nConfig(lang) {
   return axios
     .get<string>(`/app-resources/languages/${lang}.js`)
     .then(_x => {
