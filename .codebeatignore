@@ -1,8 +1,0 @@
-frontend/**/*__test*
-frontend/**/*test*.ts
-frontend/**/*test*.tsx
-**__test**
-**__tests__**
-**test**
-frontend/entry.tsx
-frontend/password_reset/index.tsx

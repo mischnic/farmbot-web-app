@@ -1,2 +1,0 @@
-class PointSerializer
-end
